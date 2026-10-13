@@ -106,9 +106,9 @@ fun LoginScreen(context:Context, navController: NavController){
 }
 
 fun navigateToRegistrationScreen(navController: NavController){
-    navController.navigate("registration"){
+    navController.navigate("register"){
         popUpTo("login") {
-            inclusive = true
+            inclusive = false
         }
     }
 }

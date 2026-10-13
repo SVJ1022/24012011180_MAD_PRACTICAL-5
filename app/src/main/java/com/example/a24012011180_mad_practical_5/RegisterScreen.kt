@@ -44,17 +44,17 @@ fun RegisterScreen(context: Context, navController: NavController){
     Column(
         modifier = Modifier.fillMaxSize().padding(horizontal = 20.dp)
     ) {
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(15.dp))
         Image(
             painter = painterResource(id = R.drawable.guni_pink_logo),
             contentDescription = "Logo",
             modifier = Modifier
-                .height(130.dp)
+                .height(90.dp)
                 .align(Alignment.CenterHorizontally),
             contentScale = ContentScale.Fit
         )
 
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(15.dp))
         Card(
             modifier = Modifier.fillMaxWidth(),
             elevation = CardDefaults.cardElevation(defaultElevation = 20.dp),
@@ -93,16 +93,10 @@ fun RegisterScreen(context: Context, navController: NavController){
             Text("Already Have an Account?", fontSize = 18.sp)
             Spacer(modifier = Modifier.width(20.dp))
             TextButton(
-                onClick={}
+                onClick={navController.popBackStack()}
             ){
                 Text("Login", fontSize = 18.sp)
             }
         }
     }
-}
-
-@Composable
-@Preview(showBackground = true)
-fun RegisterScreenPreview(){
-//    RegisterScreen()
 }
